@@ -1,8 +1,18 @@
-people = [str(x) for x in input().split(" ")]
-turns = int(input())
+from collections import deque
 
-while people:
-    for kid in range(turns):
-        people.pop(kid)
-        people.insert(0, kid)
-    print(f'Removed {kid}')
+
+people = input().split(" ")
+players = deque(people)
+potato_jump = int(input())
+counter = 0
+
+while len(players) > 1:
+    counter += 1
+    current_player = players.popleft()
+    
+    if counter == potato_jump:
+        print(f'Removed {current_player}')
+        counter = 0
+    else:
+        players.append(current_player)
+print(f'Last is {players.pop()}')
