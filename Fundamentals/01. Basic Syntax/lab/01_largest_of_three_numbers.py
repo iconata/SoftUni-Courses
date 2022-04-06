@@ -1,0 +1,10 @@
+first_number = int(input())
+second_number = int(input())
+third_number = int(input())
+list_num = list()
+list_num.append(first_number)
+list_num.append(second_number)
+list_num.append(third_number)
+list_num.sort()
+
+print(list_num[-1])
