@@ -25,7 +25,7 @@ for a in range(1, 10):
 				
 				elif multiply_result // add_result == 3 and num % 3 == 0:
 					print(f"{d}{c}{b}{a}")
-					is_combination = True12
+					is_combination = True
 					break
 				
 if not is_combination:
